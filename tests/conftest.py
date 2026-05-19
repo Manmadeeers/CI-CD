@@ -13,6 +13,8 @@ def driver():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
     options.add_argument("--window-size=1280,900")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     browser = webdriver.Chrome(options=options)
     yield browser
     browser.quit()
